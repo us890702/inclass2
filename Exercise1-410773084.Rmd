@@ -1,0 +1,49 @@
+---
+title: "練習一"
+date:"2018-10-23"
+output: html_document
+params:
+  studentID: "410773084"
+  studentName: "黃郁琇"
+---
+## 1
+引入[五大銀行一個月定存固定利率歷史月資料](https://raw.githubusercontent.com/tpemartin/github-data/master/bankdata.csv)。
+
+```{r}
+library(readr)
+bankdata <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/bankdata.csv")
+```
+### 1.1
+```{r}
+bankdata <- c("第一銀行", "台灣銀行", "合作金庫", "土地銀行", "彰化銀行", "華南銀行")
+bankdata <- factor(bankdata)
+bankdata
+```
+### 1.2
+```{r}
+library(stringr)
+x <-str_sub(bankdata$年月,1,3)
+s <-str_sub(bankdata$年月,5,6)
+library(base)
+y <- as.integer(x)
+z <- ( y + 1911)
+q <- as.character(z)
+library(stringr)
+a <-str_c(q,s,sep = "-")
+as.Date(a, "%Y-%m")
+```
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+
