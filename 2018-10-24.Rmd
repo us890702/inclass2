@@ -106,7 +106,7 @@ StuDF[-c(1,4),]
 (StuDF$score >= 80)
 (StuDF$name=="小新")
 ```
-
+...
 ```{r}
 classSurvey[classSurvey$性別 == "男" &
 classSurvey$本學期學分數 > 26,classSurvey$姓名]
