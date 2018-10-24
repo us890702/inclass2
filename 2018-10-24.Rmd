@@ -64,7 +64,25 @@ colnames(StuDF)
 rownames(StuDF)
 ```
 
+```{r}
+(StuDF$score >= 80)
+(StuDF$name == "小新")
+```
 
+```{r}
+StuDF[which(StuDF$score >= 80),2]
+StuDF[c(1,3),2]
+StuDF[which(StuDF$name == "小新"),3]
+```
+
+```{r}
+(classSurvey$性別 == "男")
+
+(classSurvey$本學期學分數 > 20)
+
+(classSurvey$性別 == "男" | 
+    classSurvey$本學期學分數 > 20)
+```
 
 ```{r}
 StuDF[,2]
@@ -87,6 +105,11 @@ StuDF[-c(1,4),]
 ```{r}
 (StuDF$score >= 80)
 (StuDF$name=="小新")
+```
+
+```{r}
+classSurvey[classSurvey$性別 == "男" &
+classSurvey$本學期學分數 > 26,classSurvey$姓名]
 ```
 
 

@@ -264,12 +264,48 @@ StuDF </code></pre>
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubmFtZXMoU3R1REYpIFxuY29sbmFtZXMoU3R1REYpXG5gYGAifQ== -->
+<pre class="r"><code>names(StuDF) 
+colnames(StuDF)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucm93bmFtZXMoU3R1REYpXG5gYGAifQ== -->
 <pre class="r"><code>rownames(StuDF)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwiMVwiIFwiMlwiIFwiM1wiIFwiNFwiIFwiNVwiXG4ifQ== -->
-<pre><code>[1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot;</code></pre>
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REZbd2hpY2goU3R1REYkc2NvcmUgPj0gODApLDJdXG5gYGAifQ== -->
+<pre class="r"><code>StuDF[which(StuDF$score &gt;= 80),2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwi5bCP5piOXCIgXCLog5bomY5cIlxuIn0= -->
+<pre><code>[1] &quot;小明&quot; &quot;胖虎&quot;</code></pre>
 <!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REZbYygxLDMpLDJdXG5gYGAifQ== -->
+<pre class="r"><code>StuDF[c(1,3),2]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwi5bCP5piOXCIgXCLog5bomY5cIlxuIn0= -->
+<pre><code>[1] &quot;小明&quot; &quot;胖虎&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REZbd2hpY2goU3R1REYkbmFtZSA9PSBcIuWwj+aWsFwiKSwzXVxuYGBgIn0= -->
+<pre class="r"><code>StuDF[which(StuDF$name == &quot;小新&quot;),3]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDcwXG4ifQ== -->
+<pre><code>[1] 70</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuU3R1REZbd2hpY2goU3R1REYkc2NvcmUgPj0gODApLDJdXG5TdHVERltjKDEsMyksMl1cblN0dURGW3doaWNoKFN0dURGJG5hbWUgPT0gXCLlsI/mlrBcIiksM11cbmBgYCJ9 -->
+<pre class="r"><code>StuDF[which(StuDF$score &gt;= 80),2]
+StuDF[c(1,3),2]
+StuDF[which(StuDF$name == &quot;小新&quot;),3]</code></pre>
+<!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
@@ -327,6 +363,14 @@ StuDF[c(1:3,5),]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2xhc3NTdXJ2ZXlbY2xhc3NTdXJ2ZXkk5oCn5YilID09IFwi55S3XCIgJlxuY2xhc3NTdXJ2ZXkk5pys5a245pyf5a245YiG5pW4ID4gMjYsY2xhc3NTdXJ2ZXkk5aeT5ZCNXVxuYGBgIn0= -->
+<pre class="r"><code>classSurvey[classSurvey$性別 == &quot;男&quot; &amp;
+classSurvey$本學期學分數 &gt; 26,classSurvey$姓名]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
 <p>```</p>
 <p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Cmd+Option+I</em>.</p>
 <p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Cmd+Shift+K</em> to preview the HTML file).</p>
@@ -334,7 +378,7 @@ StuDF[c(1:3,5),]</code></pre>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KIyMgU2V0IHVwIGxpYnJhcmllcwoKYGBge3J9CmxpYnJhcnkobHVicmlkYXRlKQpsaWJyYXJ5KHN0cmluZ3IpCmxpYnJhcnkoZ29vZ2xlc2hlZXRzKQpgYGAKCiMjIEltcG9ydCBHb29nbGUKCmBgYHtyfQpnc19hdXRoKG5ld191c2VyID0gVFJVRSkKYGBgCgpgYGB7cn0KZ3NTdXJ2ZXk8LWdzX2tleSgiMW1DOWJueGoxMU5DTm9PQ3cwVm1uNG54RVJiSHRMamVHbzl2OUM5YjJHREUiKSAgI2Rvd25sb2FkIHNoZWV0IGluZm9ybWF0aW9uIGFzIGFuIG9iamVjdApjbGFzc1N1cnZleTwtZ3NfcmVhZChnc1N1cnZleSx3cz0xKSAjYWNjZXNzIHRoZSAxc3Qgd29ya3NoZWV0CmBgYAoKYGBge3J9CmNsYXNzKGNsYXNzU3VydmV5KQpgYGAKCgpgYGB7cn0KU3R1REYgPC0gZGF0YS5mcmFtZSgKICBTdHVJRD1jKDEsMiwzLDQsNSksCiAgbmFtZT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwKICBzY29yZT1jKDgwLDYwLDkwLDcwLDUwKQogICkKU3R1REYgCmBgYAoKYGBge3J9CmFzLmNoYXJhY3RlcihTdHVERiRuYW1lKSAtPiBTdHVERiRuYW1lCmBgYAoKYGBge3J9ClN0dURGIDwtIGRhdGEuZnJhbWUoCiAgU3R1SUQ9YygxLDIsMyw0LDUpLAogIG5hbWU9Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksCiAgc2NvcmU9Yyg4MCw2MCw5MCw3MCw1MCksCiAgc3RyaW5nc0FzRmFjdG9ycyA9IEYKICApClN0dURGIApgYGAKCmBgYHtyfQpuYW1lcyhTdHVERikgCmNvbG5hbWVzKFN0dURGKQpgYGAKCmBgYHtyfQpyb3duYW1lcyhTdHVERikKYGBgCgoKCmBgYHtyfQpTdHVERlssMl0KYGBgCgpgYGB7cn0KU3R1REZbYygxLDIsMyksXQpTdHVERltjKDE6MyksXQpTdHVERltjKDE6Myw1KSxdCmBgYAoKYGBge3J9ClN0dURGW2MoMSw0KSxdCmBgYAoKYGBge3J9ClN0dURGWy1jKDEsNCksXQpgYGAKCmBgYHtyfQooU3R1REYkc2NvcmUgPj0gODApCihTdHVERiRuYW1lPT0i5bCP5pawIikKYGBgCgoKYGBgCgpBZGQgYSBuZXcgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpJbnNlcnQgQ2h1bmsqIGJ1dHRvbiBvbiB0aGUgdG9vbGJhciBvciBieSBwcmVzc2luZyAqQ21kK09wdGlvbitJKi4KCldoZW4geW91IHNhdmUgdGhlIG5vdGVib29rLCBhbiBIVE1MIGZpbGUgY29udGFpbmluZyB0aGUgY29kZSBhbmQgb3V0cHV0IHdpbGwgYmUgc2F2ZWQgYWxvbmdzaWRlIGl0IChjbGljayB0aGUgKlByZXZpZXcqIGJ1dHRvbiBvciBwcmVzcyAqQ21kK1NoaWZ0K0sqIHRvIHByZXZpZXcgdGhlIEhUTUwgZmlsZSkuIAoKVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLgoK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUiBOb3RlYm9vayIKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKVGhpcyBpcyBhbiBbUiBNYXJrZG93bl0oaHR0cDovL3JtYXJrZG93bi5yc3R1ZGlvLmNvbSkgTm90ZWJvb2suIFdoZW4geW91IGV4ZWN1dGUgY29kZSB3aXRoaW4gdGhlIG5vdGVib29rLCB0aGUgcmVzdWx0cyBhcHBlYXIgYmVuZWF0aCB0aGUgY29kZS4gCgpUcnkgZXhlY3V0aW5nIHRoaXMgY2h1bmsgYnkgY2xpY2tpbmcgdGhlICpSdW4qIGJ1dHRvbiB3aXRoaW4gdGhlIGNodW5rIG9yIGJ5IHBsYWNpbmcgeW91ciBjdXJzb3IgaW5zaWRlIGl0IGFuZCBwcmVzc2luZyAqQ21kK1NoaWZ0K0VudGVyKi4gCgpgYGB7cn0KIyMgU2V0IHVwIGxpYnJhcmllcwoKYGBge3J9CmxpYnJhcnkobHVicmlkYXRlKQpsaWJyYXJ5KHN0cmluZ3IpCmxpYnJhcnkoZ29vZ2xlc2hlZXRzKQpgYGAKCiMjIEltcG9ydCBHb29nbGUKCmBgYHtyfQpnc19hdXRoKG5ld191c2VyID0gVFJVRSkKYGBgCgpgYGB7cn0KZ3NTdXJ2ZXk8LWdzX2tleSgiMW1DOWJueGoxMU5DTm9PQ3cwVm1uNG54RVJiSHRMamVHbzl2OUM5YjJHREUiKSAgI2Rvd25sb2FkIHNoZWV0IGluZm9ybWF0aW9uIGFzIGFuIG9iamVjdApjbGFzc1N1cnZleTwtZ3NfcmVhZChnc1N1cnZleSx3cz0xKSAjYWNjZXNzIHRoZSAxc3Qgd29ya3NoZWV0CmBgYAoKYGBge3J9CmNsYXNzKGNsYXNzU3VydmV5KQpgYGAKCgpgYGB7cn0KU3R1REYgPC0gZGF0YS5mcmFtZSgKICBTdHVJRD1jKDEsMiwzLDQsNSksCiAgbmFtZT1jKCLlsI/mmI4iLCLlpKfpm4QiLCLog5bomY4iLCLlsI/mlrAiLCLlpKfnmb0iKSwKICBzY29yZT1jKDgwLDYwLDkwLDcwLDUwKQogICkKU3R1REYgCmBgYAoKYGBge3J9CmFzLmNoYXJhY3RlcihTdHVERiRuYW1lKSAtPiBTdHVERiRuYW1lCmBgYAoKYGBge3J9ClN0dURGIDwtIGRhdGEuZnJhbWUoCiAgU3R1SUQ9YygxLDIsMyw0LDUpLAogIG5hbWU9Yygi5bCP5piOIiwi5aSn6ZuEIiwi6IOW6JmOIiwi5bCP5pawIiwi5aSn55m9IiksCiAgc2NvcmU9Yyg4MCw2MCw5MCw3MCw1MCksCiAgc3RyaW5nc0FzRmFjdG9ycyA9IEYKICApClN0dURGIApgYGAKCmBgYHtyfQpuYW1lcyhTdHVERikgCmNvbG5hbWVzKFN0dURGKQpgYGAKCmBgYHtyfQpyb3duYW1lcyhTdHVERikKYGBgCgpgYGB7cn0KKFN0dURGJHNjb3JlID49IDgwKQooU3R1REYkbmFtZSA9PSAi5bCP5pawIikKYGBgCgpgYGB7cn0KU3R1REZbd2hpY2goU3R1REYkc2NvcmUgPj0gODApLDJdClN0dURGW2MoMSwzKSwyXQpTdHVERlt3aGljaChTdHVERiRuYW1lID09ICLlsI/mlrAiKSwzXQpgYGAKCmBgYHtyfQooY2xhc3NTdXJ2ZXkk5oCn5YilID09ICLnlLciKQoKKGNsYXNzU3VydmV5JOacrOWtuOacn+WtuOWIhuaVuCA+IDIwKQoKKGNsYXNzU3VydmV5JOaAp+WIpSA9PSAi55S3IiB8IAogICAgY2xhc3NTdXJ2ZXkk5pys5a245pyf5a245YiG5pW4ID4gMjApCmBgYAoKYGBge3J9ClN0dURGWywyXQpgYGAKCmBgYHtyfQpTdHVERltjKDEsMiwzKSxdClN0dURGW2MoMTozKSxdClN0dURGW2MoMTozLDUpLF0KYGBgCgpgYGB7cn0KU3R1REZbYygxLDQpLF0KYGBgCgpgYGB7cn0KU3R1REZbLWMoMSw0KSxdCmBgYAoKYGBge3J9CihTdHVERiRzY29yZSA+PSA4MCkKKFN0dURGJG5hbWU9PSLlsI/mlrAiKQpgYGAKCmBgYHtyfQpjbGFzc1N1cnZleVtjbGFzc1N1cnZleSTmgKfliKUgPT0gIueUtyIgJgpjbGFzc1N1cnZleSTmnKzlrbjmnJ/lrbjliIbmlbggPiAyNixjbGFzc1N1cnZleSTlp5PlkI1dCmBgYAoKCmBgYAoKQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkNtZCtPcHRpb24rSSouCgpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkNtZCtTaGlmdCtLKiB0byBwcmV2aWV3IHRoZSBIVE1MIGZpbGUpLiAKClRoZSBwcmV2aWV3IHNob3dzIHlvdSBhIHJlbmRlcmVkIEhUTUwgY29weSBvZiB0aGUgY29udGVudHMgb2YgdGhlIGVkaXRvci4gQ29uc2VxdWVudGx5LCB1bmxpa2UgKktuaXQqLCAqUHJldmlldyogZG9lcyBub3QgcnVuIGFueSBSIGNvZGUgY2h1bmtzLiBJbnN0ZWFkLCB0aGUgb3V0cHV0IG9mIHRoZSBjaHVuayB3aGVuIGl0IHdhcyBsYXN0IHJ1biBpbiB0aGUgZWRpdG9yIGlzIGRpc3BsYXllZC4KCg==</div>
 
 
 
