@@ -112,6 +112,15 @@ classSurvey[classSurvey$性別 == "男" &
 classSurvey$本學期學分數 > 26,classSurvey$姓名]
 ```
 
+```{r}
+library(readr)
+student <- read_csv("https://raw.githubusercontent.com/tpemartin/course-107-1-programming-for-data-science/master/data/student.csv")
+library(dplyr)
+library(magrittr)
+student %<>% mutate(
+  身高級距=cut(身高,c(0,150,155,160,165,170,175,180,185,200)))
+```
+
 
 ```
 
